@@ -8,7 +8,7 @@
   .btnShare {
   border: solid;
   color: red;
-  padding: 16px 100px;
+  padding: 16px 58px;
   text-align: center;
   text-decoration: solid;
   display: block;
@@ -36,12 +36,16 @@
 }
 
 .btnLogin {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
+  border: solid;
+  color: red;
+  padding: 16px 108px;
   text-align: center;
+  text-decoration: solid;
   display: block;
+  font-size: 10px;
   margin: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .btnLogin:hover {
@@ -52,12 +56,16 @@
   margin: auto;
 }
 .btnLogOut {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
+  border: solid;
+  color: red;
+  padding: 16px 103px;
   text-align: center;
+  text-decoration: solid;
   display: block;
+  font-size: 10px;
   margin: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .btnLogOut:hover {
@@ -74,7 +82,7 @@
   <img style="display:block;margin:auto;" src="https://sv1.picz.in.th/images/2022/05/20/HEd7Ol.png" width="400">
   <br>
   
-  <button class="btnShare" onclick="sendShare()">แชร์นามบัตรดิจิตอล<br>ข้อมูล ครูอั๋น ใจดี</button><br>
+  <button class="btnShare" onclick="sendShare()">แชร์นามบัตร<br>ครูอั๋น ใจดี</button><br>
   <button class="btnLogin" onclick="liff.login()">Log In</button><br>
   <button class="btnLogOut" onclick="logOut()">Log Out</button>
   
@@ -127,7 +135,7 @@
         "margin": "50px",
         "wrap": true,
         "align": "center",
-        "color": "#be7c4d"
+        "color": "#ffffff"
       },
       {
         "type": "box",
@@ -139,13 +147,8 @@
             "layout": "baseline",
             "contents": [
               {
-                "type": "icon",
-                "url": "https://media-public.canva.com/Kt-FM/MADIT2Kt-FM/2/tl.png",
-                "offsetTop": "5px"
-              },
-              {
                 "type": "text",
-                "text": "เบอรโทร 🥇",
+                "text": "📲 กดเบอร์",
                 "weight": "bold",
                 "margin": "sm",
                 "flex": 0,
@@ -153,25 +156,47 @@
               },
               {
                 "type": "text",
-                "text": "09-5250-8587",
+                "text": "โทร : 09-5250-8587",
                 "align": "end",
                 "color": "#daff7d",
-                "weight": "bold"
+                "weight": "bold",
+                "action": {
+                  "type": "uri",
+                  "label": "action",
+                  "uri": "tel:0952508587"
+                },
+                "gravity": "bottom"
               }
             ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "filler"
+                  }
+                ],
+                "width": "100%",
+                "backgroundColor": "#daff7d",
+                "height": "6px"
+              }
+            ],
+            "backgroundColor": "#FAD2A76E",
+            "height": "2px",
+            "margin": "sm"
           },
           {
             "type": "box",
             "layout": "baseline",
             "contents": [
               {
-                "type": "icon",
-                "url": "https://media-public.canva.com/AwS70/MAE0wAAwS70/1/tl.png",
-                "offsetTop": "6px"
-              },
-              {
                 "type": "text",
-                "text": "LINE ID",
+                "text": "✅ ติดต่อ LINE",
                 "weight": "bold",
                 "margin": "sm",
                 "flex": 0,
@@ -179,12 +204,41 @@
               },
               {
                 "type": "text",
-                "text": "kruaun_jaidee",
+                "text": "ไอดี : kruaun_jaidee",
                 "align": "end",
                 "color": "#daff7d",
-                "weight": "bold"
+                "weight": "bold",
+                "action": {
+                  "type": "uri",
+                  "label": "action",
+                  "uri": "http://line.me/ti/p/~kruaun_jaidee"
+                },
+                "gravity": "center",
+                "wrap": true,
+                "margin": "xs"
               }
             ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "filler"
+                  }
+                ],
+                "width": "100%",
+                "backgroundColor": "#daff7d",
+                "height": "6px"
+              }
+            ],
+            "backgroundColor": "#FAD2A76E",
+            "height": "2px",
+            "margin": "sm"
           }
         ]
       },
@@ -192,26 +246,23 @@
         "type": "text",
         "text": "กรุณาติดต่อครูให้เป็นเวลา ไม่เกิน 20.00 น.",
         "wrap": true,
-        "color": "#aaaaaa",
-        "size": "xxs"
+        "color": "#000000",
+        "size": "sm",
+        "align": "center"
       },
       {
         "type": "text",
-        "text": "facebook id : ",
+        "text": "🛗 ติดต่อครูทาง Messenger",
         "color": "#ffffff",
-        "align": "start",
+        "align": "center",
+        "size": "md",
         "gravity": "center",
-        "size": "xs",
-        "wrap": true
-      },
-      {
-        "type": "text",
-        "text": "https://www.facebook.com/kruaunjaidee",
-        "color": "#ffffff",
-        "align": "start",
-        "size": "xs",
-        "gravity": "center",
-        "margin": "lg"
+        "margin": "lg",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://www.m.me/kruaunjaidee"
+        }
       },
       {
         "type": "box",
@@ -241,10 +292,10 @@
           {
             "type": "button",
             "style": "primary",
-            "color": "#905c44",
+            "color": "#990000",
             "action": {
               "type": "uri",
-              "label": "แชร์นามบัตร 🎉",
+              "label": "📣 แชร์นามบัตร 📣",
               "uri": "https://liff.line.me/1657258095-PLAd4Lkb"
             },
             "height": "sm"
@@ -256,7 +307,7 @@
       }
     ],
     "paddingAll": "10px",
-    "backgroundColor": "#000000"
+    "backgroundColor": "#ff0000"
   }
 }
 }//ปิด Flex
